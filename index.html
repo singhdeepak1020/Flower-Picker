@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flower</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Flower Picker</h1>
+    <div class="flower">
+      <div class="petals">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+
+        <div class="circle"></div>
+      </div>
+      <div class="stem"></div>
+    </div>
+
+    <script>
+      function del(div) {
+        const parent = div.parentNode;
+        parent.removeChild(div);
+      }
+      const divs = document.querySelectorAll(".petal");
+      for (const div of divs) {
+        div.addEventListener("click", () => {
+          del(div);
+        });
+      }
+    </script>
+  </body>
+</html>
